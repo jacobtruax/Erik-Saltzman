@@ -118,11 +118,15 @@ if (mq1.matches) {
   const videoTag = document.querySelector("section.videoPage")
   const closeTag = document.querySelector("section.videoPage > p")
 
+
   buttons.forEach(button => {
     button.addEventListener("click", function(event){
       videoTag.classList.add("open")
       const bg = button.getAttribute("data-vid")
       var video = document.getElementById('videoPage');
+      videoTag.style.width = "960px"
+      videoTag.style.height = "625px"
+      video.style.opacity = "1"
       video.src = bg;
 
     })
@@ -133,5 +137,10 @@ if (mq1.matches) {
     if(videoTag.classList.contains("open")){
       videoTag.classList.remove("open")
     }
+    var video = document.getElementById('videoPage');
+    video.style.opacity = "0"
+    videoTag.style.width = "960px"
+    videoTag.style.height = "10px"
+    video.src = null;
   })
 }
