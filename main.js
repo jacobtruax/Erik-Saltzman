@@ -72,6 +72,9 @@ if (mq1.matches) {
     button.addEventListener("click", function(event){
       videoTag.classList.add("open")
       const bg = button.getAttribute("data-vid")
+      videoTag.style.width = "375px"
+      videoTag.style.height = "325px"
+      video.style.opacity = "1"
       var video = document.getElementById('videoPage');
       video.src = bg;
 
@@ -83,6 +86,11 @@ if (mq1.matches) {
     if(videoTag.classList.contains("open")){
       videoTag.classList.remove("open")
     }
+    var video = document.getElementById('videoPage');
+    video.style.opacity = "0"
+    videoTag.style.width = "960px"
+    videoTag.style.height = "10px"
+    video.src = null;
   })
 }else{
   // Buttons ================================
