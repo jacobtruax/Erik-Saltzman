@@ -59,7 +59,7 @@ const makeBall = function(video) {
 
   const mesh = new THREE.Mesh(geometry, material)
   mesh.userData = {
-    URL: "videos/SALTZMAN_GIFS_REEL_092319a.mp4"
+    URL: "videos/Erik_Saltzman_Reel_2k19.mp4"
   }
   scene.add(mesh)
   return mesh
@@ -137,6 +137,9 @@ if (mq1.matches) {
 
         videoTag.classList.add("open")
         const bg = intersections[0].object.userData.URL
+        videoTag.style.width = "375px"
+        videoTag.style.height = "325px"
+        video.style.opacity = "1"
         var video = document.getElementById('videoPage');
         video.src = bg;
       }
@@ -261,6 +264,9 @@ if (mq1.matches) {
         const bg = intersections[0].object.userData.URL
         var video = document.getElementById('videoPage');
         video.src = bg;
+        videoTag.style.width = "960px"
+        videoTag.style.height = "625px"
+        video.style.opacity = "1"
       }
     }
 }
