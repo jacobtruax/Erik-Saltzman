@@ -74,8 +74,8 @@ if (mq1.matches) {
       const bg = button.getAttribute("data-vid")
       videoTag.style.width = "375px"
       videoTag.style.height = "325px"
-      video.style.opacity = "1"
       var video = document.getElementById('videoPage');
+      video.style.opacity = "1"
       video.src = bg;
 
     })
