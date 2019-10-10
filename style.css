@@ -418,7 +418,7 @@ div.clock {
 @media only screen and (max-width: 900px) {
   svg.title-svg{
     width: 80vw;
-    margin-top: -150px;
+    margin-top: -200px;
   }
 
   div.title-wrap {
