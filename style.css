@@ -469,8 +469,8 @@ div.clock {
   }
 
   section.videoPage {
-    width: 100vw;
-    height: 50vh;
+    width: 375px;
+    height: 10px;
 
     /* transform: translateX(5%) translateY(-100%); */
 
