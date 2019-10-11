@@ -46,7 +46,7 @@ video.load();
   videoTexture.format = THREE.RGBFormat;
   videoTexture.generateMipmaps = false;
 
-  const texture = loader.load("lib/8-ball.png")
+  const texture = loader.load("videos/test.png")
 
   const material = new THREE.MeshPhongMaterial({
     map: texture,
