@@ -33,10 +33,12 @@ const erikVideo = document.getElementById("erikVid");
 
 const makeBall = function(video) {
 
+video.load();
+
   video.addEventListener('canplaythrough', function() {
     video.play();
   }, false);
-  video.load();
+
 
   videoTexture = new THREE.VideoTexture(video);
   videoTexture.minFilter = THREE.LinearFilter;
@@ -44,13 +46,16 @@ const makeBall = function(video) {
   videoTexture.format = THREE.RGBFormat;
   videoTexture.generateMipmaps = false;
 
+  const texture = loader.load("lib/8-ball.png")
 
-  // const texture = loader.load("lib/8-ball.png")
   const material = new THREE.MeshPhongMaterial({
-    map: videoTexture,
+    map: texture,
     color: 0x494949,
     // 5c5c5c
     emissive: 0x000000,
+    overdraw: true,
+    side: THREE.DoubleSide,
+    transparent: true,
     specular: 0x111111,
     shininess: 0
   })
@@ -61,8 +66,22 @@ const makeBall = function(video) {
   mesh.userData = {
     URL: "videos/Erik_Saltzman_Reel_2k19.mp4"
   }
+
+  video.addEventListener("loadeddata", function () {
+  material.map = videoTexture
+})
+
   scene.add(mesh)
   return mesh
+
+
+
+setTimeout( () => {
+
+			material.map = videoTexture;
+			texture.dispose();
+
+		}, 3000 );
 }
 
 const ball = makeBall(erikVideo)
