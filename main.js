@@ -89,7 +89,7 @@ if (mq1.matches) {
     var video = document.getElementById('videoPage');
     video.style.opacity = "0"
     videoTag.style.width = "375px"
-    videoTag.style.height = "10px"
+    videoTag.style.height = "325px"
     video.src = null;
   })
 }else{

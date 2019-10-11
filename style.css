@@ -479,18 +479,6 @@ div.clock {
     border-radius: 120px;
   }
 
-  /* section.videoPage video {
-    width: 80vw;
-    height: auto;
-  } */
-
-  /* .open {
-    transform: translateX(5%) translateY(45%) !important;
-  } */
-  .open {
-    transform: translateX(-50%) translateY(-25%) !important;
-  }
-
   section.videoPage iframe {
     width: 325px;
     height: 180px;
