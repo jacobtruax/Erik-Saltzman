@@ -490,7 +490,7 @@ div.clock {
 
   section.eightBall {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
