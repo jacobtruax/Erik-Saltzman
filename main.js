@@ -4,7 +4,7 @@ function showTime(){
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "AM ";
-    var zone = "NYC";
+    // var zone = "NYC";
 
     if(h == 0){
         h = 12;
@@ -19,7 +19,8 @@ function showTime(){
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    var time = h + ":" + m + ":" + s + " " + session + zone;
+    // var time = h + ":" + m + ":" + s + " " + session + zone;
+    var time = h + ":" + m + ":" + s + " " + session;
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
 
@@ -93,6 +94,25 @@ if (mq1.matches) {
     video.src = null;
   })
 }else{
+
+
+  const tasksTag = document.querySelector("section.legend")
+
+  inView('.tasks')
+    .on('enter', task => {
+      tasksTag.classList.add("openLegend")
+    })
+
+  inView.offset(500);
+
+  inView('.tasks')
+    .on('exit', task => {
+      tasksTag.classList.remove("openLegend")
+    })
+
+  inView.offset(400);
+
+
   // Buttons ================================
   const buttons = document.querySelectorAll("div.button")
   // const divImage = document.querySelector("div.imageMain")
@@ -125,18 +145,18 @@ if (mq1.matches) {
   // Videos ===============================
   const videoTag = document.querySelector("section.videoPage")
   const closeTag = document.querySelector("section.videoPage > p")
-
+  let canPlay = false;
 
   buttons.forEach(button => {
     button.addEventListener("click", function(event){
-      videoTag.classList.add("open")
       const bg = button.getAttribute("data-vid")
       var video = document.getElementById('videoPage');
       videoTag.style.width = "960px"
       videoTag.style.height = "625px"
       video.style.opacity = "1"
       video.src = bg;
-
+      canPlay = true;
+      videoTag.classList.add("open")
     })
 
   })
