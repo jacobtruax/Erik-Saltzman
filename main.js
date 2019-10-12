@@ -151,8 +151,8 @@ if (mq1.matches) {
     button.addEventListener("click", function(event){
       const bg = button.getAttribute("data-vid")
       var video = document.getElementById('videoPage');
-      videoTag.style.width = "960px"
-      videoTag.style.height = "625px"
+      videoTag.style.width = "1160px"
+      videoTag.style.height = "680px"
       video.style.opacity = "1"
       video.src = bg;
       canPlay = true;
@@ -167,7 +167,7 @@ if (mq1.matches) {
     }
     var video = document.getElementById('videoPage');
     video.style.opacity = "0"
-    videoTag.style.width = "960px"
+    videoTag.style.width = "1160px"
     videoTag.style.height = "10px"
     video.src = null;
   })
