@@ -283,8 +283,8 @@ if (mq1.matches) {
         const bg = intersections[0].object.userData.URL
         var video = document.getElementById('videoPage');
         video.src = bg;
-        videoTag.style.width = "960px"
-        videoTag.style.height = "625px"
+        videoTag.style.width = "1160px"
+        videoTag.style.height = "680px"
         video.style.opacity = "1"
       }
     }
