@@ -485,8 +485,11 @@ div.clock {
   div.title-wrap {
     flex-direction: column;
 
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 50px;
+
+    padding-left: 30px;
+    padding-right: 30px;
 
   }
 
