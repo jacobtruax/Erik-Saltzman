@@ -68,6 +68,22 @@ if (mq1.matches) {
     })
   })
 
+  const tasksTag = document.querySelector("section.legend")
+
+  inView('.tasks')
+    .on('enter', task => {
+      tasksTag.classList.add("openLegend")
+    })
+
+  inView.offset(0);
+
+  inView('.tasks')
+    .on('exit', task => {
+      tasksTag.classList.remove("openLegend")
+    })
+
+  inView.offset(0);
+
 
   buttons.forEach(button => {
     button.addEventListener("click", function(event){
@@ -119,7 +135,12 @@ if (mq1.matches) {
 
   buttons.forEach(button => {
     button.addEventListener("mouseover", function(event){
-      document.body.style.cursor = "pointer";
+      if(!button.hasAttribute("data-vid")){
+
+      }else{
+        document.body.style.cursor = "pointer";
+      }
+
       // cursor.style.display = "block"
       cursor.style.opacity = "1"
 
@@ -149,14 +170,20 @@ if (mq1.matches) {
 
   buttons.forEach(button => {
     button.addEventListener("click", function(event){
-      const bg = button.getAttribute("data-vid")
-      var video = document.getElementById('videoPage');
-      videoTag.style.width = "1160px"
-      videoTag.style.height = "680px"
-      video.style.opacity = "1"
-      video.src = bg;
-      canPlay = true;
-      videoTag.classList.add("open")
+
+      if(!button.hasAttribute("data-vid")){
+
+      }else{
+        const bg = button.getAttribute("data-vid")
+        var video = document.getElementById('videoPage');
+        videoTag.style.width = "1160px"
+        videoTag.style.height = "680px"
+        video.style.opacity = "1"
+        video.src = bg;
+        canPlay = true;
+        videoTag.classList.add("open")
+      }
+
     })
 
   })
