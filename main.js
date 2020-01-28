@@ -75,7 +75,7 @@ if (mq1.matches) {
       tasksTag.classList.add("openLegend")
     })
 
-  inView.offset(0);
+  inView.offset(100);
 
   inView('.tasks')
     .on('exit', task => {
