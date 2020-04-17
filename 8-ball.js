@@ -64,7 +64,7 @@ video.load();
 
   const mesh = new THREE.Mesh(geometry, material)
   mesh.userData = {
-    URL: "videos/Erik_Saltzman_Reel_2k19.mp4"
+    URL: "videos/Erik_Saltzman_Reel_2k20.mp4"
   }
 
   video.addEventListener("loadeddata", function () {
